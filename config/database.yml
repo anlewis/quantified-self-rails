@@ -16,3 +16,4 @@ production:
   database: quantified_self_production
   username: quantified_self
   password: <%= ENV['QUANTIFIED_SELF_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
