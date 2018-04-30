@@ -1,0 +1,44 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/food.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/quantified-self-rails/spec/models/meal_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/meal.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/annalewis/turing/4module/projects/quantified-self-rails/spec/requests/api/v1/foods_request_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1525118432
+  }
+}
