@@ -6,6 +6,9 @@ describe "Foods API" do
 
     get '/api/v1/foods'
 
+    foods = JSON.parse(response.body)
+
     expect(response).to be_success
+    expect(foods.count).to eq(3)
   end
 end
