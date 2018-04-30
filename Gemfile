@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'coveralls', require: false
 gem 'faker'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'pry'
