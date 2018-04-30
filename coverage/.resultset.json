@@ -36,12 +36,15 @@
         null,
         1,
         null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/controllers/api/v1/foods_controller.rb": [
         1,
         1,
-        null,
+        1,
         null,
         null
       ],
@@ -50,6 +53,6 @@
         null
       ]
     },
-    "timestamp": 1525118908
+    "timestamp": 1525119124
   }
 }
