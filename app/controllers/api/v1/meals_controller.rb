@@ -13,6 +13,12 @@ class Api::V1::MealsController < ApplicationController
     render json: meal.foods << food
   end
 
+  def destroy
+    meal = Meal.find(params[:meal_id])
+    food = Food.find(params[:id])
+    render json: meal.foods.delete(food)
+  end
+
   private
 
     def meal_params
