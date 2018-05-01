@@ -10,7 +10,7 @@ Quantified self is a simple calorie tracking application. It is used as a learni
 
 ### Getting Started
 
-This project uses the Ruby on Rails framework, which can be installed from [here](http://installrails.com/).
+This project uses the Ruby on Rails framework, which can be installed [here](http://installrails.com/).
 [Bundler](http://bundler.io/) is used to install the gems needed for this application.
 
 In order to run this appication in the development environment, perform the following in the CLI:
@@ -24,9 +24,9 @@ In order to spin-up the server, run: `rails s`
 
 The frontend component can be found at: [quantified-self-fe](https://github.com/anlewis/quantified-self-fe). Follow the instructions in the Readme to spin up a server locally.
 
-This application is also in production. The base Heroku URI is [](https://qs-rails.herokuapp.com). In order to access the endpoints, use V1.
+This application is also in production. The base Heroku URI is (https://qs-rails.herokuapp.com). In order to access the endpoints, use `/api/v1/ENDPOINT`.
 
-Example: [](https://qs-rails.herokuapp.com/api/v1/foods.json)
+Example: (https://qs-rails.herokuapp.com/api/v1/foods.json)
 
 To view with the frontend component, visit the [Github Page](https://anlewis.github.io/quantified-self-fe/)
 
@@ -44,7 +44,7 @@ To view with the frontend component, visit the [Github Page](https://anlewis.git
 
 The following schema was used to create a [PostgreSQL](https://www.postgresql.org/) database:
 
-![schema](https://ibb.co/hXd3ES)
+![schema](https://preview.ibb.co/e3J3ES/Screenshot_2018_05_01_17_12_51.png)
 
 ### Testing
 
@@ -60,7 +60,7 @@ In order to run tests, perform the following:
 
 Quantified Self will have the following endpoints:
 
-Food Endpoints:
+#### Food Endpoints
 - `GET /api/v1/foods`: Returns all foods currently in the database
 
 ```
@@ -71,24 +71,24 @@ Food Endpoints:
 }
 ```
 
-- `GET /api/v1/foods/:id`: Returns the food object with the specific :id you’ve passed in or 404 if the food is not found.
+- `GET /api/v1/foods/:id` Returns the food object with the specific :id you’ve passed in or 404 if the food is not found.
 
-- `POST /api/v1/foods`: Allows creating a new food with the parameters:
+- `POST /api/v1/foods` Allows creating a new food with the parameters:
 
 ```
 { "food": { "name": "Name of food here", "calories": "Calories here"} }
 ```
 
-- `PATCH /api/v1/foods/:id`: Allows one to update an existing food with the parameters:
+- `PATCH /api/v1/foods/:id` Allows one to update an existing food with the parameters:
 
 ```
 { "food": { "name": "Mint", "calories": "14"} }
 ```
 
-- `DELETE /api/v1/foods/:id`: Will delete the food with the id passed in and return a 204 status code. If the food can’t be found, a 404 will be returned.
+- `DELETE /api/v1/foods/:id` Will delete the food with the id passed in and return a 204 status code. If the food can’t be found, a 404 will be returned.
 
-Meal Endpoints:
-- `GET /api/v1/meals`: Returns all the meals in the database along with their associated foods.
+#### Meal Endpoints
+- `GET /api/v1/meals` Returns all the meals in the database along with their associated foods.
 
 ```
 [
@@ -114,33 +114,6 @@ Meal Endpoints:
         ]
     },
     {
-        "id": 2,
-        "name": "Snack",
-        "foods": [
-            {
-                "id": 1,
-                "name": "Banana",
-                "calories": 150
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "name": "Lunch",
-        "foods": [
-            {
-                "id": 2,
-                "name": "Bagel Bites - Four Cheese",
-                "calories": 650
-            },
-            {
-                "id": 3,
-                "name": "Chicken Burrito",
-                "calories": 800
-            },
-        ]
-    },
-    {
         "id": 4,
         "name": "Dinner",
         "foods": [
@@ -159,7 +132,7 @@ Meal Endpoints:
 ]
 ```
 
-- `GET /api/v1/meals/:meal_id/foods`: Returns all the foods associated with the meal with an id specified by :meal_id or a 404 if the meal is not found.
+- `GET /api/v1/meals/:meal_id/foods` Returns all the foods associated with the meal with an id specified by :meal_id or a 404 if the meal is not found.
 
 ```
 {
@@ -175,17 +148,12 @@ Meal Endpoints:
             "id": 6,
             "name": "Yogurt",
             "calories": 550
-        },
-        {
-            "id": 12,
-            "name": "Apple",
-            "calories": 220
         }
     ]
 }
 ```
 
-- `POST /api/v1/meals/:meal_id/foods/:id`: Adds the food with :id to the meal with :meal_id. This returns:
+- `POST /api/v1/meals/:meal_id/foods/:id` Adds the food with :id to the meal with :meal_id. This returns:
 
 ```
 {
@@ -193,7 +161,7 @@ Meal Endpoints:
 }
 ```
 
-- `DELETE /api/v1/meals/:meal_id/foods/:id`: Removes the food with :id from the meal with :meal_id. This returns:
+- `DELETE /api/v1/meals/:meal_id/foods/:id` Removes the food with :id from the meal with :meal_id. This returns:
 
 ```
 {
