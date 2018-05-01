@@ -1,9 +1,10 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/food.rb": [
+      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/meal.rb": [
         1,
         1,
+        null,
         1,
         null
       ],
@@ -12,100 +13,15 @@
         1,
         null
       ],
-      "/Users/annalewis/turing/4module/projects/quantified-self-rails/spec/models/meal_spec.rb": [
-        1,
-        null,
+      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/food.rb": [
         1,
         1,
         null
       ],
-      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/meal.rb": [
+      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/controllers/api/v1/meals_controller.rb": [
         1,
         1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/Users/annalewis/turing/4module/projects/quantified-self-rails/spec/requests/api/v1/foods_request_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        2,
-        null,
-        null
-      ],
-      "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/controllers/api/v1/foods_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
+        0,
         null,
         null,
         1,
@@ -115,7 +31,7 @@
         1,
         null,
         1,
-        2,
+        0,
         null,
         null
       ],
@@ -124,6 +40,6 @@
         null
       ]
     },
-    "timestamp": 1525140845
+    "timestamp": 1525144968
   }
 }
