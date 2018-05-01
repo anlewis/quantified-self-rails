@@ -4,6 +4,7 @@
       "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/food.rb": [
         1,
         1,
+        1,
         null
       ],
       "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/application_record.rb": [
@@ -19,6 +20,7 @@
         null
       ],
       "/Users/annalewis/turing/4module/projects/quantified-self-rails/app/models/meal.rb": [
+        1,
         1,
         1,
         null,
@@ -89,6 +91,6 @@
         null
       ]
     },
-    "timestamp": 1525128494
+    "timestamp": 1525138746
   }
 }

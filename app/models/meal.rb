@@ -1,5 +1,6 @@
 class Meal < ApplicationRecord
-  has_many :foods
+  has_one :meals_foods
+  has_many :foods, through: :meals_foods
 
   enum name: [ :snack, :breakfast, :lunch, :dinner ]
 end
