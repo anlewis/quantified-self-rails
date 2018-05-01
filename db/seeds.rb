@@ -11,7 +11,7 @@ Meal.create!(id: 4, name: 3)
 puts "Created #{Meal.count} meals"
 
 50.times do |index|
-  Food.create!(name: Faker::Food.dish, calories: Random.rand(0..2000), meal: Meal.find(Random.rand(1..4)))
+  Food.create!(name: Faker::Food.dish, calories: Random.rand(0..2000))
 end
 
 puts "Created #{Food.count} foods"
