@@ -40,10 +40,22 @@ describe "Foods API" do
     food_params = { name: "Waffle" }
 
     patch "/api/v1/foods/#{id}", params: {food: food_params}
-    food = Food.find_by(id: id)
+    food = Food.find(id)
 
     expect(response).to be_success
     expect(food.name).to_not eq(previous_name)
     expect(food.name).to eq("Waffle")
+  end
+
+  it "can destroy an food" do
+    id = create(:food).id
+
+    expect(Food.count).to eq(1)
+
+    delete "/api/v1/foods/#{id}"
+
+    expect(response).to be_success
+    expect(Food.count).to eq(0)
+    expect{Food.find(id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
 end
