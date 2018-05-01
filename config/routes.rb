@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :foods, except: [:new, :edit]
       resources :meals, only: [:index]
       get '/meals/:meal_id/foods', to: 'meals#show'
+      post '/meals/:meal_id/foods/:id', to: 'meals#update'
     end
   end
 end

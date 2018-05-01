@@ -49,7 +49,7 @@ describe "Meals API" do
     meal = Meal.last
 
     expect(response).to be_success
-    expect(meal.food.name).to eq("Waffles")
+    expect(meal.foods.first.name).to eq("Waffles")
   end
 
   it "can remove a food from a meal" do
