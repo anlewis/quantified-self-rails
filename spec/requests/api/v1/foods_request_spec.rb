@@ -2,14 +2,26 @@ require 'rails_helper'
 
 describe "Foods API" do
   it "sends a list of foods" do
-    create_list(:food, 3)
+    food_1 = create(:food)
+    food_2 = create(:food)
 
     get '/api/v1/foods'
 
     foods = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(foods.count).to eq(3)
+    expect(foods.count).to eq 2
+    expect(foods[0]['id']).to eq food_1.id
+    expect(foods[1]['id']).to eq food_2.id
+
+    food = foods.first
+
+    expect(food).to have_key "id"
+    expect(food).to have_key "name"
+    expect(food).to have_key "calories"
+
+    expect(food).not_to have_key "created_at"
+    expect(food).not_to have_key "updated_at"
   end
 
   it "can get one food by its id" do
@@ -21,6 +33,19 @@ describe "Foods API" do
 
     expect(response).to be_success
     expect(food["id"]).to eq(id)
+
+    expect(food).to have_key "id"
+    expect(food).to have_key "name"
+    expect(food).to have_key "calories"
+
+    expect(food).not_to have_key "created_at"
+    expect(food).not_to have_key "updated_at"
+  end
+
+  it "show returns 404 if food with requested id does not exist" do
+    get "/api/v1/foods/1"
+
+    expect(response.status).to eq 404
   end
 
   it "can create a new food" do
@@ -54,8 +79,14 @@ describe "Foods API" do
 
     delete "/api/v1/foods/#{id}"
 
-    expect(response).to be_success
+    expect(response.status).to eq 204
     expect(Food.count).to eq(0)
     expect{Food.find(id)}.to raise_error(ActiveRecord::RecordNotFound)
+  end
+
+  it "destroy returns 404 if food with requested id does not exist" do
+    delete "/api/v1/foods/1"
+
+    expect(response.status).to eq 404
   end
 end
