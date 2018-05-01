@@ -11,7 +11,7 @@ class CreateMealsAndFoods < ActiveRecord::Migration[5.1]
       t.timestamps
     end
 
-    create_table :meals_foods do |t|
+    create_table :foods_meals do |t|
       t.belongs_to :meal, index: true
       t.belongs_to :food, index: true
     end

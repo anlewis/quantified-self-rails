@@ -22,17 +22,17 @@ ActiveRecord::Schema.define(version: 20180501013038) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "foods_meals", force: :cascade do |t|
+    t.bigint "meal_id"
+    t.bigint "food_id"
+    t.index ["food_id"], name: "index_foods_meals_on_food_id"
+    t.index ["meal_id"], name: "index_foods_meals_on_meal_id"
+  end
+
   create_table "meals", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "meals_foods", force: :cascade do |t|
-    t.bigint "meal_id"
-    t.bigint "food_id"
-    t.index ["food_id"], name: "index_meals_foods_on_food_id"
-    t.index ["meal_id"], name: "index_meals_foods_on_meal_id"
   end
 
 end

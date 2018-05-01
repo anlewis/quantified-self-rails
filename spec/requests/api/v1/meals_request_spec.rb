@@ -9,11 +9,11 @@ describe "Meals API" do
     food_2 = create(:food)
     food_3 = create(:food)
 
-    meal_1 << food_1
-    meal_1 << food_2
+    meal_1.foods << food_1
+    meal_1.foods << food_2
 
-    meal_2 << food_2
-    meal_2 << food_3
+    meal_2.foods << food_2
+    meal_2.foods << food_3
     
     get '/api/v1/meals'
 
@@ -29,16 +29,16 @@ describe "Meals API" do
     food_2 = create(:food)
     food_3 = create(:food)
 
-    meal << food_1
-    meal << food_2
-    meal << food_3
+    meal.foods << food_1
+    meal.foods << food_2
+    meal.foods << food_3
 
     get "/api/v1/meals/#{meal.id}/foods"
 
     meal_response = JSON.parse(response.body)
-
-    expect(meal_response).to be_success
-    expect(meal_response.id).to eq(meal.id)
+    binding.pry
+    expect(response).to be_success
+    expect(meal_response.first[:id]).to eq(meal.id)
   end
 
   it "can add a food to a meal" do
@@ -57,8 +57,8 @@ describe "Meals API" do
     food_1 = create(:food)
     food_2 = create(:food)
 
-    meal << food_1
-    meal << food_2
+    meal.foods << food_1
+    meal.foods << food_2
 
     expect(Meal.foods.count).to eq(2)
 
