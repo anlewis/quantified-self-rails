@@ -66,6 +66,5 @@ describe "Meals API" do
 
     expect(response).to be_success
     expect(meal.foods.count).to eq(1)
-    expect{meal.foods.find(id)}.to raise_error(ActiveRecord::RecordNotFound)
   end
 end
