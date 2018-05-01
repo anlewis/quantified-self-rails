@@ -8,7 +8,11 @@ class Api::V1::FoodsController < ApplicationController
   end
 
   def create
-    render json: Food.create!(food_params)
+    render json: Food.create(food_params)
+  end
+
+  def update
+    render json: Food.update(params[:id], food_params)
   end
 
   private

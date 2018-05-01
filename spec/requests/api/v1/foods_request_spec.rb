@@ -39,7 +39,7 @@ describe "Foods API" do
     previous_name = Food.last.name
     food_params = { name: "Waffle" }
 
-    put "/api/v1/foods/#{id}", params: {food: food_params}
+    patch "/api/v1/foods/#{id}", params: {food: food_params}
     food = Food.find_by(id: id)
 
     expect(response).to be_success
