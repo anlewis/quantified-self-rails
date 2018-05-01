@@ -36,9 +36,9 @@ describe "Meals API" do
     get "/api/v1/meals/#{meal.id}/foods"
 
     meal_response = JSON.parse(response.body)
-    binding.pry
+  
     expect(response).to be_success
-    expect(meal_response.first[:id]).to eq(meal.id)
+    expect(meal_response['id']).to eq(meal.id)
   end
 
   it "can add a food to a meal" do

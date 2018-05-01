@@ -15,6 +15,7 @@ gem 'turbolinks', '~> 5'
 gem 'coveralls', require: false
 gem 'faker'
 gem 'rack-cors'
+gem "active_model_serializers"
 
 group :development, :test do
   gem 'pry'
