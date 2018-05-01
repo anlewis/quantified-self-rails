@@ -7,6 +7,12 @@ class Api::V1::MealsController < ApplicationController
     render json: Meal.find(params[:meal_id])
   end
 
+  def update
+    meal = Meal.find(params[:meal_id])
+    food = Food.find(params[:id])
+    render json: meal.foods << food
+  end
+
   private
 
     def meal_params
