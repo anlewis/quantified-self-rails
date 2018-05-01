@@ -60,9 +60,9 @@ describe "Meals API" do
     meal.foods << food_1
     meal.foods << food_2
 
-    expect(Meal.foods.count).to eq(2)
+    expect(meal.foods.count).to eq(2)
 
-    delete " /api/v1/meals/#{meal.id}/foods/#{food_1.id}"
+    delete "/api/v1/meals/#{meal.id}/foods/#{food_1.id}"
 
     expect(response).to be_success
     expect(meal.foods.count).to eq(1)
