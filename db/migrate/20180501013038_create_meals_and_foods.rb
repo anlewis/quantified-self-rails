@@ -1,7 +1,7 @@
 class CreateMealsAndFoods < ActiveRecord::Migration[5.1]
   def change
     create_table :meals do |t|
-      t.string :name
+      t.integer :name
       t.timestamps
     end
  
