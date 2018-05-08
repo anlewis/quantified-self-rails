@@ -32,7 +32,7 @@ To view with the frontend component, visit the [Github Page](https://anlewis.git
 
 ### Learning Goals
 - Create a Rails API given specified endpoints and response formats.
-- Create an Express API given specified endpoints and response formats.
+- Create an [Express API](https://github.com/anlewis/quantified-self-express) given specified endpoints and response formats.
 - Create an API in a new language of the students choice given specified endpoints and response formats.
 - Review and refactor code (in each of the three languages) so that it:
   - is well organized
